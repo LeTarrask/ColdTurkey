@@ -17,7 +17,12 @@ struct PassStore: Identifiable, Codable {
 class PassManager: ObservableObject {
     /// This class logs and stores all password information.
     
-    @Published var passes: [PassStore] = [PassStore]()
+    @Published var passes: [PassStore]
+    
+    init() {
+        passes = [PassStore]()
+        load()
+    }
     
     private static var documentsFolder: URL {
         do {
