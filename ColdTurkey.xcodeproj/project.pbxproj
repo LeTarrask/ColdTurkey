@@ -19,6 +19,8 @@
 		790517722785FAEF00944817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790517472785FAEF00944817 /* Assets.xcassets */; };
 		790517822785FB3000944817 /* PassStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790517812785FB3000944817 /* PassStore.swift */; };
 		790517832785FB3000944817 /* PassStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790517812785FB3000944817 /* PassStore.swift */; };
+		790517852785FEEF00944817 /* PassManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790517842785FEEF00944817 /* PassManager.swift */; };
+		790517862785FEEF00944817 /* PassManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790517842785FEEF00944817 /* PassManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		790517692785FAEF00944817 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		7905176B2785FAEF00944817 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		790517812785FB3000944817 /* PassStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassStore.swift; sourceTree = "<group>"; };
+		790517842785FEEF00944817 /* PassManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 				790517452785FAEE00944817 /* ColdTurkeyApp.swift */,
 				790517462785FAEE00944817 /* ContentView.swift */,
 				790517812785FB3000944817 /* PassStore.swift */,
+				790517842785FEEF00944817 /* PassManager.swift */,
 				790517472785FAEF00944817 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -305,6 +309,7 @@
 			files = (
 				7905176F2785FAEF00944817 /* ContentView.swift in Sources */,
 				7905176D2785FAEF00944817 /* ColdTurkeyApp.swift in Sources */,
+				790517852785FEEF00944817 /* PassManager.swift in Sources */,
 				790517822785FB3000944817 /* PassStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +320,7 @@
 			files = (
 				790517702785FAEF00944817 /* ContentView.swift in Sources */,
 				7905176E2785FAEF00944817 /* ColdTurkeyApp.swift in Sources */,
+				790517862785FEEF00944817 /* PassManager.swift in Sources */,
 				790517832785FB3000944817 /* PassStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
