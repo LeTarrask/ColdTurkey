@@ -11,9 +11,12 @@ struct ContentView: View {
     let manager = PassManager()
     
     var body: some View {
-        CreatePass(manager: manager)
-            .padding()
+        List {
+            ForEach(manager.passes) { pass in
+                Text(pass.service)
+            }
         }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
