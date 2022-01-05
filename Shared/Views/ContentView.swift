@@ -14,7 +14,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(manager.passes) { pass in
-                    NavigationLink(destination: ShowCreds()) {
+                    NavigationLink(destination: ShowCreds(store: pass)) {
                         Text(pass.service)
                     }
                 }

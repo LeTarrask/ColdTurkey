@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct ShowCreds: View {
+    let store: PassStore
+    
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(store.service)
+            Text(store.login)
+            
+            if store.releaseDate < Date.now {
+                Text(store.password)
+            } else {
+                Text("Password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
+            }
+        }
     }
 }
 
-struct ShowCreds_Previews: PreviewProvider {
-    static var previews: some View {
-        ShowCreds()
-    }
-}
+//struct ShowCreds_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ShowCreds()
+//    }
+//}
