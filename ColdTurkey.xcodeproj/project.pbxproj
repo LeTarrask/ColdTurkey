@@ -23,6 +23,8 @@
 		790517862785FEEF00944817 /* PassManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790517842785FEEF00944817 /* PassManager.swift */; };
 		7905178D278601CF00944817 /* CreatePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178C278601CF00944817 /* CreatePass.swift */; };
 		7905178E278601CF00944817 /* CreatePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178C278601CF00944817 /* CreatePass.swift */; };
+		790517902786087600944817 /* ShowCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178F2786087600944817 /* ShowCreds.swift */; };
+		790517912786087600944817 /* ShowCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178F2786087600944817 /* ShowCreds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		790517812785FB3000944817 /* PassStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassStore.swift; sourceTree = "<group>"; };
 		790517842785FEEF00944817 /* PassManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassManager.swift; sourceTree = "<group>"; };
 		7905178C278601CF00944817 /* CreatePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePass.swift; sourceTree = "<group>"; };
+		7905178F2786087600944817 /* ShowCreds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCreds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				790517462785FAEE00944817 /* ContentView.swift */,
+				7905178F2786087600944817 /* ShowCreds.swift */,
 				7905178C278601CF00944817 /* CreatePass.swift */,
 			);
 			path = Views;
@@ -339,6 +343,7 @@
 				7905176F2785FAEF00944817 /* ContentView.swift in Sources */,
 				7905176D2785FAEF00944817 /* ColdTurkeyApp.swift in Sources */,
 				790517852785FEEF00944817 /* PassManager.swift in Sources */,
+				790517902786087600944817 /* ShowCreds.swift in Sources */,
 				790517822785FB3000944817 /* PassStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +356,7 @@
 				790517702785FAEF00944817 /* ContentView.swift in Sources */,
 				7905176E2785FAEF00944817 /* ColdTurkeyApp.swift in Sources */,
 				790517862785FEEF00944817 /* PassManager.swift in Sources */,
+				790517912786087600944817 /* ShowCreds.swift in Sources */,
 				790517832785FB3000944817 /* PassStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
