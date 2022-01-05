@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let manager = PassManager()
+    
     var body: some View {
-        Text("Hello, world!")
+        CreatePass(manager: manager)
             .padding()
-    }
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
