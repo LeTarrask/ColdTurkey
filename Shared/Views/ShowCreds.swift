@@ -17,12 +17,25 @@ struct ShowCreds: View {
     }()
     
     var body: some View {
-        VStack {
-            Text(store.service)
-            Text(store.login)
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Your credentials for \(store.service)")
+                    .font(.title)
+            }
+        
+            HStack {
+                Text("Login:")
+                    .fontWeight(.bold)
+                Text(store.login)
+            }
             
             if store.releaseDate < Date.now {
-                Text(store.password)
+                HStack {
+                    Text("Password:")
+                        .fontWeight(.bold)
+                    Text(store.password)
+                }
+                
             } else {
                 Text("Password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
             }
@@ -30,8 +43,9 @@ struct ShowCreds: View {
     }
 }
 
-//struct ShowCreds_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ShowCreds()
-//    }
-//}
+struct ShowCreds_Previews: PreviewProvider {
+    static var previews: some View {
+        let store = PassStore(id: UUID(), service: "Twitter", login: "tarrask", password: "ASODAJS", releaseDate: Date.distantPast)
+        return ShowCreds(store: store)
+    }
+}
