@@ -11,10 +11,17 @@ struct ContentView: View {
     let manager = PassManager()
     
     var body: some View {
-        List {
-            ForEach(manager.passes) { pass in
-                Text(pass.service)
+        NavigationView {
+            List {
+                ForEach(manager.passes) { pass in
+                    Text(pass.service)
+                }
             }
+            .navigationBarItems(trailing:
+                                    NavigationLink(destination: CreatePass( manager: manager)) {
+                Text("Add Password")
+            }
+            )
         }
     }
 }
