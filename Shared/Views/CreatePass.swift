@@ -44,7 +44,10 @@ struct CreatePass: View {
                 }
                 
                 Button("Store Credentials") {
-                    manager.passes.append(PassStore(id: UUID(), service: service, login: login, password: password, releaseDate: releaseDate))
+                    let credentials = PassStore(id: UUID(), service: service, login: login, password: password, releaseDate: releaseDate)
+                    
+                    manager.passes.append(credentials)
+                    manager.save()
                     
                     presentationMode.wrappedValue.dismiss()
                 }

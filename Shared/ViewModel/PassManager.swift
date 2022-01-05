@@ -10,7 +10,11 @@ import Foundation
 class PassManager: ObservableObject {
     /// This class logs and stores all password information.
     
-    @Published var passes: [PassStore]
+    @Published var passes: [PassStore] {
+        didSet {
+            print(passes)
+        }
+    }
     
     init() {
         passes = [PassStore]()
@@ -54,7 +58,7 @@ class PassManager: ObservableObject {
         }
 
         passes.sort {
-            $0.login < $1.login
+            $0.login > $1.login
         }
     }
 

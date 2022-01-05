@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let manager = PassManager()
+    @ObservedObject var manager = PassManager()
     
     var body: some View {
         NavigationView {
