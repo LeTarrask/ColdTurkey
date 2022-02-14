@@ -37,7 +37,13 @@ struct ShowCreds: View {
                 }
                 
             } else {
-                Text("Password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
+                VStack(alignment: .leading) {
+                    Text("Password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
+                        .fontWeight(.bold)
+                    Text(store.password)
+                        .redacted(reason: .placeholder)
+                }
+                
             }
         }
     }
@@ -45,7 +51,7 @@ struct ShowCreds: View {
 
 struct ShowCreds_Previews: PreviewProvider {
     static var previews: some View {
-        let store = PassStore(id: UUID(), service: "Twitter", login: "tarrask", password: "ASODAJS", releaseDate: Date.distantPast)
+        let store = PassStore(id: UUID(), service: "Twitter", login: "tarrask", password: "ASODAJS", releaseDate: Date.distantFuture)
         return ShowCreds(store: store)
     }
 }
