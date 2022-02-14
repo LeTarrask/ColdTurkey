@@ -50,7 +50,7 @@ class PassManager: ObservableObject {
             }
 
             guard let passes = try? JSONDecoder().decode([PassStore].self, from: data) else {
-                fatalError("Can't decode saved refuel data.")
+                fatalError("Can't decode saved  data.")
             }
             DispatchQueue.main.async {
                 self?.passes = passes
