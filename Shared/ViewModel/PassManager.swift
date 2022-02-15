@@ -39,13 +39,6 @@ class PassManager: ObservableObject {
     func load() {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let data = try? Data(contentsOf: PassManager.passURL) else {
-                // Uncomment to use test data for views
-//                #if DEBUG
-//                DispatchQueue.main.async {
-//                    self?.passes = PassStore.data
-//                    print("refuelled")
-//                }
-//                #endif
                 return
             }
 
@@ -58,7 +51,7 @@ class PassManager: ObservableObject {
         }
 
         passes.sort {
-            $0.login > $1.login
+            $0.service > $1.service
         }
     }
 
