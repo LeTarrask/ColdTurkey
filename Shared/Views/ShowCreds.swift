@@ -53,7 +53,8 @@ struct ShowCreds: View {
         }
         .padding()
         .frame(height: 250)
-        .navigationTitle("Credential")
+        .navigationTitle("Cold Turkey Credential")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

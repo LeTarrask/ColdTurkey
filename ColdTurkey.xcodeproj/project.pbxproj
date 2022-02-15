@@ -175,8 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				790517462785FAEE00944817 /* ContentView.swift */,
-				7905178F2786087600944817 /* ShowCreds.swift */,
 				7905178C278601CF00944817 /* CreatePass.swift */,
+				7905178F2786087600944817 /* ShowCreds.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
