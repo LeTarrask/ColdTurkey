@@ -22,8 +22,8 @@ struct ContentView: View {
             .navigationBarItems(trailing:
                                     NavigationLink(destination: CreatePass( manager: manager)) {
                 Text("Add Password")
-            }
-            )
+            })
+            .navigationTitle("Cold Turkey")
         }
     }
 }
