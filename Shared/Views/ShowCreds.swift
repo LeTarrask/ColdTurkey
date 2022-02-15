@@ -17,35 +17,43 @@ struct ShowCreds: View {
     }()
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Your credentials for \(store.service)")
-                    .font(.title)
-            }
-        
-            HStack {
-                Text("Login:")
-                    .fontWeight(.bold)
-                Text(store.login)
-            }
+        ZStack {
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                            .fill(Color.purple).opacity(0.7)
             
-            if store.releaseDate < Date.now {
+            VStack(alignment: .leading) {
                 HStack {
-                    Text("Password:")
+                    Text("Your credentials for \(store.service)")
+                        .font(.title2)
                         .fontWeight(.bold)
-                    Text(store.password)
+                }
+            
+                HStack {
+                    Text("Login:")
+                        .fontWeight(.bold)
+                    Text(store.login)
                 }
                 
-            } else {
-                VStack(alignment: .leading) {
-                    Text("Password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
-                        .fontWeight(.bold)
-                    Text(store.password)
-                        .redacted(reason: .placeholder)
+                if store.releaseDate < Date.now {
+                    HStack {
+                        Text("Password:")
+                            .fontWeight(.bold)
+                        Text(store.password)
+                    }
+                    
+                } else {
+                    VStack(alignment: .leading) {
+                        Text("Password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
+                            .fontWeight(.bold)
+                        Text(store.password)
+                            .redacted(reason: .placeholder)
+                    }
                 }
-                
             }
         }
+        .padding()
+        .frame(height: 250)
+        .navigationTitle("Credential")
     }
 }
 
