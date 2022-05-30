@@ -5,6 +5,7 @@
 //  Created by Alex Luna on 30/05/2022.
 //
 
+#if os(iOS)
 import SwiftUI
 import MessageUI
 
@@ -40,3 +41,4 @@ class EmailHelper: NSObject, MFMailComposeViewControllerDelegate {
         UIApplication.shared.windows.first?.rootViewController
     }
 }
+#endif
