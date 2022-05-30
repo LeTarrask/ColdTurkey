@@ -25,6 +25,18 @@
 		7905178E278601CF00944817 /* CreatePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178C278601CF00944817 /* CreatePass.swift */; };
 		790517902786087600944817 /* ShowCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178F2786087600944817 /* ShowCreds.swift */; };
 		790517912786087600944817 /* ShowCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178F2786087600944817 /* ShowCreds.swift */; };
+		79C1AFA228450E7900F47188 /* WelcomeOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9D28450E7900F47188 /* WelcomeOnboarding.swift */; };
+		79C1AFA328450E7900F47188 /* WelcomeOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9D28450E7900F47188 /* WelcomeOnboarding.swift */; };
+		79C1AFA428450E7900F47188 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9E28450E7900F47188 /* OnboardingView.swift */; };
+		79C1AFA528450E7900F47188 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9E28450E7900F47188 /* OnboardingView.swift */; };
+		79C1AFA628450E7900F47188 /* NewFeatureOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9F28450E7900F47188 /* NewFeatureOnboarding.swift */; };
+		79C1AFA728450E7900F47188 /* NewFeatureOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9F28450E7900F47188 /* NewFeatureOnboarding.swift */; };
+		79C1AFA828450E7900F47188 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFA028450E7900F47188 /* OnboardingPage.swift */; };
+		79C1AFA928450E7900F47188 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFA028450E7900F47188 /* OnboardingPage.swift */; };
+		79C1AFAA28450E7900F47188 /* SalesOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFA128450E7900F47188 /* SalesOnboarding.swift */; };
+		79C1AFAB28450E7900F47188 /* SalesOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFA128450E7900F47188 /* SalesOnboarding.swift */; };
+		79C1AFAE28450E9300F47188 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFAD28450E9300F47188 /* OnboardingRouter.swift */; };
+		79C1AFAF28450E9300F47188 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFAD28450E9300F47188 /* OnboardingRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +73,12 @@
 		790517842785FEEF00944817 /* PassManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassManager.swift; sourceTree = "<group>"; };
 		7905178C278601CF00944817 /* CreatePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePass.swift; sourceTree = "<group>"; };
 		7905178F2786087600944817 /* ShowCreds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCreds.swift; sourceTree = "<group>"; };
+		79C1AF9D28450E7900F47188 /* WelcomeOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeOnboarding.swift; sourceTree = "<group>"; };
+		79C1AF9E28450E7900F47188 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		79C1AF9F28450E7900F47188 /* NewFeatureOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureOnboarding.swift; sourceTree = "<group>"; };
+		79C1AFA028450E7900F47188 /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		79C1AFA128450E7900F47188 /* SalesOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesOnboarding.swift; sourceTree = "<group>"; };
+		79C1AFAD28450E9300F47188 /* OnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				790517842785FEEF00944817 /* PassManager.swift */,
+				79C1AFAD28450E9300F47188 /* OnboardingRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,8 +196,21 @@
 				790517462785FAEE00944817 /* ContentView.swift */,
 				7905178C278601CF00944817 /* CreatePass.swift */,
 				7905178F2786087600944817 /* ShowCreds.swift */,
+				79C1AFAC28450E7E00F47188 /* Onboarding */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		79C1AFAC28450E7E00F47188 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				79C1AFA028450E7900F47188 /* OnboardingPage.swift */,
+				79C1AF9E28450E7900F47188 /* OnboardingView.swift */,
+				79C1AF9D28450E7900F47188 /* WelcomeOnboarding.swift */,
+				79C1AF9F28450E7900F47188 /* NewFeatureOnboarding.swift */,
+				79C1AFA128450E7900F47188 /* SalesOnboarding.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +294,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					7905174B2785FAEF00944817 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -340,11 +372,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7905178D278601CF00944817 /* CreatePass.swift in Sources */,
+				79C1AFAE28450E9300F47188 /* OnboardingRouter.swift in Sources */,
 				7905176F2785FAEF00944817 /* ContentView.swift in Sources */,
+				79C1AFAA28450E7900F47188 /* SalesOnboarding.swift in Sources */,
 				7905176D2785FAEF00944817 /* ColdTurkeyApp.swift in Sources */,
 				790517852785FEEF00944817 /* PassManager.swift in Sources */,
+				79C1AFA628450E7900F47188 /* NewFeatureOnboarding.swift in Sources */,
 				790517902786087600944817 /* ShowCreds.swift in Sources */,
+				79C1AFA428450E7900F47188 /* OnboardingView.swift in Sources */,
+				79C1AFA228450E7900F47188 /* WelcomeOnboarding.swift in Sources */,
 				790517822785FB3000944817 /* PassStore.swift in Sources */,
+				79C1AFA828450E7900F47188 /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,11 +391,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7905178E278601CF00944817 /* CreatePass.swift in Sources */,
+				79C1AFAF28450E9300F47188 /* OnboardingRouter.swift in Sources */,
 				790517702785FAEF00944817 /* ContentView.swift in Sources */,
+				79C1AFAB28450E7900F47188 /* SalesOnboarding.swift in Sources */,
 				7905176E2785FAEF00944817 /* ColdTurkeyApp.swift in Sources */,
 				790517862785FEEF00944817 /* PassManager.swift in Sources */,
+				79C1AFA728450E7900F47188 /* NewFeatureOnboarding.swift in Sources */,
 				790517912786087600944817 /* ShowCreds.swift in Sources */,
+				79C1AFA528450E7900F47188 /* OnboardingView.swift in Sources */,
+				79C1AFA328450E7900F47188 /* WelcomeOnboarding.swift in Sources */,
 				790517832785FB3000944817 /* PassStore.swift in Sources */,
+				79C1AFA928450E7900F47188 /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +617,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -601,6 +646,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

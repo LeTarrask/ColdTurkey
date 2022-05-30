@@ -9,9 +9,24 @@ import SwiftUI
 
 @main
 struct ColdTurkeyApp: App {
+    @ObservedObject var onboardRouter: OnboardingRouter = OnboardingRouter()
+    
+    @State var onboarding: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack {
+                ContentView()
+                    .onAppear {
+                        if onboardRouter.currentPage == .onboarding {
+                            onboarding.toggle()
+                        }
+                    }
+            }
+            .edgesIgnoringSafeArea(.top)
+            .sheet(isPresented: $onboarding, content: {
+                OnboardingView(pages: OnboardingPage.fullOnboarding)
+            })
         }
     }
 }
