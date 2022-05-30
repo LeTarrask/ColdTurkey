@@ -20,7 +20,7 @@ struct SecurityOnboarding: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-            Text("Cold Turkey only stores the passwords on your phone. No data is transmitted anywhere. If you lose your phone, you can still reset it on the original site.")
+            Text("Cold Turkey only stores the passwords on your phone. No data is transmitted anywhere. If you lose your phone, you can still reset it on the original site. But for what? 😡")
                 .font(.body)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
