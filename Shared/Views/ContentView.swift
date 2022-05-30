@@ -35,6 +35,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let store = PassStore(id: UUID(), service: "Twitter", login: "tarrask", password: "ASODAJS", releaseDate: Date.distantFuture)
+        return ContentView()
     }
 }
