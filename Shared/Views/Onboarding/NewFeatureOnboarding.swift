@@ -12,19 +12,19 @@ struct NewFeatureOnboarding: View {
         VStack(alignment: .center) {
             Image(systemName: "drop.fill")
                 .resizable()
-                .frame(width: 200, height: 300)
+                .scaledToFit()
+                .frame(width: 200, height: 150)
             Text("Main headline")
                 .font(.title)
                 .fontWeight(.bold)
-            Text("""
-Headline with features and long ipsum uasdasdasd asdasda asd asdasdasd asd asd asdasd asd asd asd asd asd asd asd ad
-""")
+            Text("Main copy lines explaining what this app is about Main copy lines explaining what this app is about ")
                 .font(.body)
                 .foregroundColor(.gray)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity)
                 .padding(.horizontal, 30)
-                .padding(.top, 5)
         }
+        .padding(.bottom, 70)
     }
 }
 
