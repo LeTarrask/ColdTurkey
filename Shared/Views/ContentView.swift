@@ -15,7 +15,12 @@ struct ContentView: View {
             List {
                 ForEach(manager.passes) { pass in
                     NavigationLink(destination: ShowCreds(store: pass)) {
-                        Text(pass.service)
+                        VStack {
+                            Text(pass.service)
+                                .font(.headline)
+                            Text(pass.login)
+                                .font(.subheadline)
+                        }
                     }
                 }
             }
