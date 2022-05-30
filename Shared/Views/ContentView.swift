@@ -46,7 +46,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let manager = PassManager()
         for i in Range(1...5) {
-            let store = PassStore(id: UUID(), service: "Twitter \(i)", login: "tarrask \(i*5)", password: "ASODAJS", releaseDate: Date.distantFuture)
+            let store = PassStore(id: UUID(),
+                                  service: "Twitter \(i)",
+                                  login: "tarrask \(i*5)",
+                                  password: "ASODAJS",
+                                  releaseDate: i % 2 == 0 ? Date.distantFuture : Date.distantPast)
             manager.passes.append(store)
         }
         return ContentView(manager: manager)
