@@ -41,7 +41,11 @@ struct FeedbackView: View {
             }
             .disabled(!MFMailComposeViewController.canSendMail())
             .sheet(isPresented: $isShowingMailView) {
-                MailView(result: self.$result)
+                Button(action: {
+                   EmailHelper.shared.sendEmail(subject: "Cold Turkey - \(name) - \(subject)", body: subject, to: "coldturkey@tarrask.com")
+                 }) {
+                     Text("Send Email")
+                 }
             }
         }
     }

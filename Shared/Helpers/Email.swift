@@ -8,51 +8,35 @@
 import SwiftUI
 import MessageUI
 
-// TO DO: implement send email https://stackoverflow.com/questions/56784722/swiftui-send-email
+// TO DO: implement send email https://thinkdiff.net/how-to-send-email-in-swiftui-5a9047e3442f
 
-struct MailView: UIViewControllerRepresentable {
+class EmailHelper: NSObject, MFMailComposeViewControllerDelegate {
+    public static let shared = EmailHelper()
+    private override init() {
+        //
+    }
     
-    @Environment(\.presentationMode) var presentation
-    @Binding var result: Result<MFMailComposeResult, Error>?
-    
-    class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
-        
-        @Binding var presentation: PresentationMode
-        @Binding var result: Result<MFMailComposeResult, Error>?
-        
-        init(presentation: Binding<PresentationMode>,
-             result: Binding<Result<MFMailComposeResult, Error>?>) {
-            _presentation = presentation
-            _result = result
+    func sendEmail(subject: String, body: String, to: String){
+        if !MFMailComposeViewController.canSendMail() {
+            print("No mail account found")
+            return
         }
         
-        func mailComposeController(_ controller: MFMailComposeViewController,
-                                   didFinishWith result: MFMailComposeResult,
-                                   error: Error?) {
-            defer {
-                $presentation.wrappedValue.dismiss()
-            }
-            guard error == nil else {
-                self.result = .failure(error!)
-                return
-            }
-            self.result = .success(result)
-        }
-    }
-    
-    func makeCoordinator() -> Coordinator {
-        return Coordinator(presentation: presentation,
-                           result: $result)
-    }
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
-        let vc = MFMailComposeViewController()
-        vc.mailComposeDelegate = context.coordinator
-        return vc
-    }
-    
-    func updateUIViewController(_ uiViewController: MFMailComposeViewController,
-                                context: UIViewControllerRepresentableContext<MailView>) {
+        let picker = MFMailComposeViewController()
         
+        picker.setSubject(subject)
+        picker.setMessageBody(body, isHTML: true)
+        picker.setToRecipients([to])
+        picker.mailComposeDelegate = self
+        
+        EmailHelper.getRootViewController()?.present(picker, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        EmailHelper.getRootViewController()?.dismiss(animated: true, completion: nil)
+    }
+    
+    static func getRootViewController() -> UIViewController? {
+        UIApplication.shared.windows.first?.rootViewController
     }
 }
