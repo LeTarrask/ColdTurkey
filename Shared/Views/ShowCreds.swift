@@ -17,44 +17,41 @@ struct ShowCreds: View {
     }()
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color.purple).opacity(0.7)
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Your \(store.service) credentials")
+                    .font(.title2)
+                    .fontWeight(.bold)
+            }
+        
+            HStack {
+                Text("Login:")
+                    .fontWeight(.bold)
+                Text(store.login)
+            }
             
-            VStack(alignment: .leading) {
+            if store.releaseDate < Date.now {
                 HStack {
-                    Text("Your credentials for \(store.service)")
-                        .font(.title2)
+                    Text("Password:")
                         .fontWeight(.bold)
-                }
-            
-                HStack {
-                    Text("Login:")
-                        .fontWeight(.bold)
-                    Text(store.login)
+                    Text(store.password)
+                        .textSelection(.enabled)
                 }
                 
-                if store.releaseDate < Date.now {
+            } else {
+                VStack(alignment: .leading) {
                     HStack {
                         Text("Password:")
                             .fontWeight(.bold)
                         Text(store.password)
-                    }
-                    
-                } else {
-                    VStack(alignment: .leading) {
-                        Text("Password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
-                            .fontWeight(.bold)
-                        Text(store.password)
                             .redacted(reason: .placeholder)
                     }
+                    Text("This password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
+                        .fontWeight(.bold)
+                    
                 }
             }
         }
-        .padding()
-        .frame(height: 250)
-        .navigationTitle("Cold Turkey Credential")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
