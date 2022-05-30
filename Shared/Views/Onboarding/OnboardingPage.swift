@@ -37,13 +37,9 @@ enum OnboardingPage: CaseIterable {
      func view(action: @escaping () -> Void) -> some View {
          switch self {
          case .welcome:
-            VStack {
-                WelcomeOnboarding()
-            }
+             WelcomeOnboarding()
          case .newFeature:
-            VStack {
-                NewFeatureOnboarding()
-            }
+             NewFeatureOnboarding()
 //         case .permissions:
 //             VStack {
 //                 Text("We need permissions")
