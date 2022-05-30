@@ -37,6 +37,10 @@
 		79C1AFAB28450E7900F47188 /* SalesOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFA128450E7900F47188 /* SalesOnboarding.swift */; };
 		79C1AFAE28450E9300F47188 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFAD28450E9300F47188 /* OnboardingRouter.swift */; };
 		79C1AFAF28450E9300F47188 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFAD28450E9300F47188 /* OnboardingRouter.swift */; };
+		79C1AFB128451CBA00F47188 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFB028451CBA00F47188 /* FeedbackView.swift */; };
+		79C1AFB228451CBA00F47188 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFB028451CBA00F47188 /* FeedbackView.swift */; };
+		79C1AFB428451E3000F47188 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFB328451E3000F47188 /* Email.swift */; };
+		79C1AFB528451E3000F47188 /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AFB328451E3000F47188 /* Email.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,8 @@
 		79C1AFA028450E7900F47188 /* OnboardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		79C1AFA128450E7900F47188 /* SalesOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesOnboarding.swift; sourceTree = "<group>"; };
 		79C1AFAD28450E9300F47188 /* OnboardingRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		79C1AFB028451CBA00F47188 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		79C1AFB328451E3000F47188 /* Email.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 				790517892785FF1500944817 /* Views */,
 				790517882785FF0F00944817 /* Model */,
 				790517872785FF0900944817 /* ViewModel */,
+				79C1AFB628451E3800F47188 /* Helpers */,
 				790517472785FAEF00944817 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -196,6 +203,7 @@
 				790517462785FAEE00944817 /* ContentView.swift */,
 				7905178C278601CF00944817 /* CreatePass.swift */,
 				7905178F2786087600944817 /* ShowCreds.swift */,
+				79C1AFB028451CBA00F47188 /* FeedbackView.swift */,
 				79C1AFAC28450E7E00F47188 /* Onboarding */,
 			);
 			path = Views;
@@ -211,6 +219,14 @@
 				79C1AFA128450E7900F47188 /* SalesOnboarding.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		79C1AFB628451E3800F47188 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				79C1AFB328451E3000F47188 /* Email.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,9 +395,11 @@
 				790517852785FEEF00944817 /* PassManager.swift in Sources */,
 				79C1AFA628450E7900F47188 /* NewFeatureOnboarding.swift in Sources */,
 				790517902786087600944817 /* ShowCreds.swift in Sources */,
+				79C1AFB428451E3000F47188 /* Email.swift in Sources */,
 				79C1AFA428450E7900F47188 /* OnboardingView.swift in Sources */,
 				79C1AFA228450E7900F47188 /* WelcomeOnboarding.swift in Sources */,
 				790517822785FB3000944817 /* PassStore.swift in Sources */,
+				79C1AFB128451CBA00F47188 /* FeedbackView.swift in Sources */,
 				79C1AFA828450E7900F47188 /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,9 +416,11 @@
 				790517862785FEEF00944817 /* PassManager.swift in Sources */,
 				79C1AFA728450E7900F47188 /* NewFeatureOnboarding.swift in Sources */,
 				790517912786087600944817 /* ShowCreds.swift in Sources */,
+				79C1AFB528451E3000F47188 /* Email.swift in Sources */,
 				79C1AFA528450E7900F47188 /* OnboardingView.swift in Sources */,
 				79C1AFA328450E7900F47188 /* WelcomeOnboarding.swift in Sources */,
 				790517832785FB3000944817 /* PassStore.swift in Sources */,
+				79C1AFB228451CBA00F47188 /* FeedbackView.swift in Sources */,
 				79C1AFA928450E7900F47188 /* OnboardingPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
