@@ -19,16 +19,15 @@ struct ContentView: View {
                     .padding(.horizontal, 30)
                     .foregroundColor(.gray)
                 List {
-                    ScrollView {
-                        ForEach(manager.passes) { pass in
-                            NavigationLink(destination: ShowCreds(store: pass)) {
-                                VStack(alignment: .leading) {
-                                    Text(pass.service)
-                                        .font(.headline)
-                                    Text(pass.login)
-                                        .font(.subheadline)
-                                        .foregroundColor(.gray)
-                                }
+                    
+                    ForEach(manager.passes) { pass in
+                        NavigationLink(destination: ShowCreds(store: pass)) {
+                            VStack(alignment: .leading) {
+                                Text(pass.service)
+                                    .font(.headline)
+                                Text(pass.login)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
                             }
                         }
                     }
@@ -36,11 +35,11 @@ struct ContentView: View {
                     .navigationBarItems(trailing:
                                             NavigationLink(destination: CreatePass( manager: manager)) {
                         Text("Add Password")
-                })
+                    })
                 }
                 
                 NavigationLink("Give feedback", destination: FeedbackView())
-            
+                
             }.navigationTitle("Stored Passwords")
         }
     }
