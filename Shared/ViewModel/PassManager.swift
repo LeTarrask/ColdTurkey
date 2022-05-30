@@ -51,7 +51,7 @@ class PassManager: ObservableObject {
         }
 
         passes.sort {
-            $0.service > $1.service
+            $0.releaseDate > $1.releaseDate
         }
     }
 
