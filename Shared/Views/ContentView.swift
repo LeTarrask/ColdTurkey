@@ -19,25 +19,29 @@ struct ContentView: View {
                     .padding(.horizontal, 30)
                     .foregroundColor(.gray)
                 List {
-                    ForEach(manager.passes) { pass in
-                        NavigationLink(destination: ShowCreds(store: pass)) {
-                            VStack(alignment: .leading) {
-                                Text(pass.service)
-                                    .font(.headline)
-                                Text(pass.login)
-                                    .font(.subheadline)
-                                    .foregroundColor(.gray)
+                    ScrollView {
+                        ForEach(manager.passes) { pass in
+                            NavigationLink(destination: ShowCreds(store: pass)) {
+                                VStack(alignment: .leading) {
+                                    Text(pass.service)
+                                        .font(.headline)
+                                    Text(pass.login)
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
+                                }
                             }
                         }
                     }
-                }
-                .listStyle(InsetGroupedListStyle())
-                .navigationBarItems(trailing:
-                                        NavigationLink(destination: CreatePass( manager: manager)) {
-                    Text("Add Password")
+                    .listStyle(InsetGroupedListStyle())
+                    .navigationBarItems(trailing:
+                                            NavigationLink(destination: CreatePass( manager: manager)) {
+                        Text("Add Password")
                 })
-            .navigationTitle("Stored Passwords")
-            }
+                }
+                
+                NavigationLink("Give feedback", destination: FeedbackView())
+            
+            }.navigationTitle("Stored Passwords")
         }
     }
 }
@@ -45,7 +49,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let manager = PassManager()
-        for i in Range(1...5) {
+        for i in Range(1...25) {
             let store = PassStore(id: UUID(),
                                   service: "Twitter \(i)",
                                   login: "tarrask \(i*5)",

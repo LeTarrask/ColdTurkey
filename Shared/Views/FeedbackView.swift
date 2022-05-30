@@ -19,6 +19,10 @@ struct FeedbackView: View {
     var body: some View {
         // TO DO: Send an email with your feedback about this app
         VStack {
+            Text("Send a message to the developer")
+                .font(.headline)
+            Text("Your opinion is extremely necessary.")
+                .font(.caption)
             Form {
                 Section("Your name") {
                     TextField("Name", text: $name)
