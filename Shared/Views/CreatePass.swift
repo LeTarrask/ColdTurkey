@@ -37,13 +37,15 @@ struct CreatePass: View {
                     }
                     
                     DatePicker(selection: $releaseDate, in: Date()..., displayedComponents: .date) {
-                                    Text("Select a release date")
-                                }
-
-                                Text("Password will be unlocked in \(releaseDate, formatter: dateFormatter)")
+                        Text("Pick a release date")
+                    }
+                    
+                    Text("🛑 This password won't be available until \(releaseDate, formatter: dateFormatter)")
+                        .foregroundColor(.red)
+                        .fontWeight(.bold)
                 }
                 
-                Button("Store Credentials") {
+                Button("Save Credentials") {
                     let credentials = PassStore(id: UUID(), service: service, login: login, password: password, releaseDate: releaseDate)
                     
                     manager.passes.append(credentials)
@@ -51,6 +53,8 @@ struct CreatePass: View {
                     
                     presentationMode.wrappedValue.dismiss()
                 }
+                
+                Spacer()
             }
             .navigationTitle("Create new protected password")
             .navigationBarTitleDisplayMode(.inline)
@@ -61,5 +65,6 @@ struct CreatePass: View {
 struct CreatePass_Previews: PreviewProvider {
     static var previews: some View {
         CreatePass(manager: PassManager())
+            .previewDevice("iPhone 13 mini")
     }
 }
