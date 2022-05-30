@@ -9,15 +9,15 @@ import SwiftUI
 
 enum OnboardingPage: CaseIterable {
      case welcome
-     case newFeature
+     case howTo
 //     case permissions
-     case sales
+     case securityOnboarding
 
      static let fullOnboarding = OnboardingPage.allCases
 
     var shouldShowNextButton: Bool {
          switch self {
-         case .welcome, .newFeature:
+         case .welcome, .howTo:
              return true
          default:
              return false
@@ -26,7 +26,7 @@ enum OnboardingPage: CaseIterable {
 
     var shouldShowDismissButton: Bool {
          switch self {
-         case .sales:
+         case .securityOnboarding:
              return true
          default:
              return false
@@ -38,8 +38,8 @@ enum OnboardingPage: CaseIterable {
          switch self {
          case .welcome:
              WelcomeOnboarding()
-         case .newFeature:
-             NewFeatureOnboarding()
+         case .howTo:
+             HowTo()
 //         case .permissions:
 //             VStack {
 //                 Text("We need permissions")
@@ -49,8 +49,8 @@ enum OnboardingPage: CaseIterable {
 //                     Text("Continue")
 //                 })
 //             }
-         case .sales:
-             SalesOnboarding()
+         case .securityOnboarding:
+             SecurityOnboarding()
          }
      }
  }

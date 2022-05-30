@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("🚨 You saved these passwords here for a reason. \nAre you really sure you need to go back to these sites? 🤔")
+                Text("🚨 You saved these passwords here for a reason \n⏰ Some are redacted until a later date \n🤔 Are you really sure you need to go back to these sites?")
                     .font(.footnote)
                     .multilineTextAlignment(.leading)
                     .padding(.horizontal, 30)

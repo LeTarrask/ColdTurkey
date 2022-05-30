@@ -1,5 +1,5 @@
 //
-//  WelcomeOnboarding.swift
+//  NewFeatureOnboarding.swift
 //  Cold Turkey
 //
 //  Created by Alex Luna on 29/03/2021.
@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct WelcomeOnboarding: View {
+struct HowTo: View {
     var body: some View {
         VStack(alignment: .center) {
-            Text("🔏")
+            Text("🎉")
                 .font(.system(size: 150))
 //            Image(systemName: "drop.fill")
 //                .resizable()
 //                .scaledToFit()
 //                .frame(width: 200, height: 150)
-            Text("Go Cold Turkey on social media")
+            Text("Locking yourself out of temptation is easy as 1-2-3")
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-            Text("Store your social media credentials on Cold Turkey, reset them, and set a date for release. Keep yourself out of social media for the time you want.")
+            Text("1. Create a new credential set for any site and store it on Cold Turkey until the day you chose.\n2. Reset your password, and don't let your browser remember it. (It's also good if you can't remember, either).\n3. Next time you try to check your timeline, you'll be locked out until the day you chose.")
                 .font(.body)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
@@ -31,8 +31,8 @@ struct WelcomeOnboarding: View {
     }
 }
 
-struct WelcomeOnboarding_Previews: PreviewProvider {
+struct NewFeatureOnboarding_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeOnboarding()
+        HowTo()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  WelcomeOnboarding.swift
+//  SalesOnboarding.swift
 //  Cold Turkey
 //
 //  Created by Alex Luna on 29/03/2021.
@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct WelcomeOnboarding: View {
+struct SecurityOnboarding: View {
     var body: some View {
         VStack(alignment: .center) {
-            Text("🔏")
+            Text("🚨")
                 .font(.system(size: 150))
 //            Image(systemName: "drop.fill")
 //                .resizable()
 //                .scaledToFit()
 //                .frame(width: 200, height: 150)
-            Text("Go Cold Turkey on social media")
+            Text("Your password is safely stored. Keep it that way.")
                 .font(.title)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-            Text("Store your social media credentials on Cold Turkey, reset them, and set a date for release. Keep yourself out of social media for the time you want.")
+            Text("Cold Turkey only stores the passwords on your phone. No data is transmitted anywhere. If you lose your phone, you can still reset it on the original site.")
                 .font(.body)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
@@ -31,8 +31,10 @@ struct WelcomeOnboarding: View {
     }
 }
 
-struct WelcomeOnboarding_Previews: PreviewProvider {
+struct SalesOnboarding_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeOnboarding()
+        SecurityOnboarding()
+            .previewDevice("iPhone 13")
+            .previewInterfaceOrientation(.portrait)
     }
 }
