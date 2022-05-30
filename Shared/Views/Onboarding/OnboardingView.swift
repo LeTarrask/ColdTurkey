@@ -24,6 +24,8 @@ struct OnboardingView: View {
     
     var body: some View {
         VStack {
+            
+            // CONTENT PAGES
             ForEach(pages, id: \.self) { page in
                 if page == currentPage {
                     withAnimation(.easeInOut) {
@@ -37,6 +39,7 @@ struct OnboardingView: View {
                 }
             }
             
+            // STEPPED CIRCLES
             HStack {
                 ForEach(pages, id: \.self) { page in
                     Circle()
@@ -44,6 +47,7 @@ struct OnboardingView: View {
                 }
             }
             
+            // BUTTON
             Group {
                 if currentPage.shouldShowNextButton {
                     HStack {
