@@ -57,9 +57,8 @@ struct CreatePass: View {
                 Spacer()
             }
             .navigationTitle("Create new protected password")
-#if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
-#endif
+
         }
     }
 }

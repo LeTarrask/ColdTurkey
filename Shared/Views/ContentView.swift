@@ -31,19 +31,18 @@ struct ContentView: View {
                             }
                         }
                     }
-#if os(iOS)
                     .listStyle(InsetGroupedListStyle())
 
                     .navigationBarItems(trailing:
                                             NavigationLink(destination: CreatePass( manager: manager)) {
                         Text("Add Password")
                     })
-#endif
+
                 }
                 
-#if os(iOS)
+
                 NavigationLink("Give feedback", destination: FeedbackView())
-#endif
+
             
             
         }.navigationTitle("Stored Passwords")

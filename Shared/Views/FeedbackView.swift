@@ -5,7 +5,6 @@
 //  Created by tarrask on 30/05/2022.
 //
 
-#if os(iOS)
 import SwiftUI
 import MessageUI
 
@@ -61,4 +60,3 @@ struct FeedbackView_Previews: PreviewProvider {
         FeedbackView()
     }
 }
-#endif
