@@ -41,7 +41,7 @@ struct ContentView: View {
                 }
                 
 
-                NavigationLink("Give feedback", destination: FeedbackView())
+//                NavigationLink("Give feedback", destination: FeedbackView())
 
             
             
