@@ -12,7 +12,7 @@ class PassManager: ObservableObject {
     
     @Published var passes: [PassStore] {
         didSet {
-            print(passes)
+            save()
         }
     }
     
@@ -51,7 +51,7 @@ class PassManager: ObservableObject {
         }
 
         passes.sort {
-            $0.releaseDate >= $1.releaseDate
+            $0.releaseDate > $1.releaseDate
         }
     }
 

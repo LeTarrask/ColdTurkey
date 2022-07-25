@@ -39,4 +39,14 @@ class Tests_iOS: XCTestCase {
             }
         }
     }
+    
+    func testDateIsAfter() throws {
+        let pastDate = Date.now.addingTimeInterval(-200)
+        
+        XCTAssertTrue(Date.now.isAfter(pastDate), "Date set before now should be displayed")
+        
+        let futureDate = Date.now.addingTimeInterval(86400)
+        
+        XCTAssertFalse(Date.now.isAfter(futureDate), "Date set for the future should be hidden")
+    }
 }

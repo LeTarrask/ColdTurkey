@@ -19,7 +19,6 @@ struct ContentView: View {
                     .padding(.horizontal, 30)
                     .foregroundColor(.gray)
                 List {
-                    
                     ForEach(manager.passes) { pass in
                         NavigationLink(destination: ShowCreds(store: pass)) {
                             VStack(alignment: .leading) {
@@ -31,24 +30,23 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .listStyle(InsetGroupedListStyle())
-
-                    .navigationBarItems(trailing:
-                                            NavigationLink(destination: CreatePass( manager: manager)) {
-                        Text("Add Password")
-                    })
-
+                    .onDelete(perform: removeRows )
                 }
+                .listStyle(InsetGroupedListStyle())
                 
-
-//                NavigationLink("Give feedback", destination: FeedbackView())
-
-            
-            
-        }.navigationTitle("Stored Passwords")
+            }.navigationTitle("Stored Passwords")
+        }
+        .navigationBarItems(trailing: NavigationLink(destination: CreatePass(manager: manager)) {
+                Text("Add Password")
+        })
+        
+    }
+    
+    func removeRows(at offsets: IndexSet) {
+        manager.passes.remove(atOffsets: offsets)
     }
 }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

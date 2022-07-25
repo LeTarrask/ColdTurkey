@@ -25,6 +25,9 @@
 		7905178E278601CF00944817 /* CreatePass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178C278601CF00944817 /* CreatePass.swift */; };
 		790517902786087600944817 /* ShowCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178F2786087600944817 /* ShowCreds.swift */; };
 		790517912786087600944817 /* ShowCreds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7905178F2786087600944817 /* ShowCreds.swift */; };
+		793437AD288F0FB6000B10EC /* extension date isAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793437AC288F0FB6000B10EC /* extension date isAfter.swift */; };
+		793437AE288F0FB6000B10EC /* extension date isAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793437AC288F0FB6000B10EC /* extension date isAfter.swift */; };
+		793437AF288F1097000B10EC /* extension date isAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793437AC288F0FB6000B10EC /* extension date isAfter.swift */; };
 		79C1AFA228450E7900F47188 /* WelcomeOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9D28450E7900F47188 /* WelcomeOnboarding.swift */; };
 		79C1AFA328450E7900F47188 /* WelcomeOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9D28450E7900F47188 /* WelcomeOnboarding.swift */; };
 		79C1AFA428450E7900F47188 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1AF9E28450E7900F47188 /* OnboardingView.swift */; };
@@ -77,6 +80,7 @@
 		790517842785FEEF00944817 /* PassManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassManager.swift; sourceTree = "<group>"; };
 		7905178C278601CF00944817 /* CreatePass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePass.swift; sourceTree = "<group>"; };
 		7905178F2786087600944817 /* ShowCreds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCreds.swift; sourceTree = "<group>"; };
+		793437AC288F0FB6000B10EC /* extension date isAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "extension date isAfter.swift"; path = "Shared/Helpers/extension date isAfter.swift"; sourceTree = SOURCE_ROOT; };
 		79C1AF9D28450E7900F47188 /* WelcomeOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeOnboarding.swift; sourceTree = "<group>"; };
 		79C1AF9E28450E7900F47188 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		79C1AF9F28450E7900F47188 /* HowTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowTo.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				79C1AFB328451E3000F47188 /* Email.swift */,
+				793437AC288F0FB6000B10EC /* extension date isAfter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 			files = (
 				7905178D278601CF00944817 /* CreatePass.swift in Sources */,
 				79C1AFAE28450E9300F47188 /* OnboardingRouter.swift in Sources */,
+				793437AD288F0FB6000B10EC /* extension date isAfter.swift in Sources */,
 				7905176F2785FAEF00944817 /* ContentView.swift in Sources */,
 				79C1AFAA28450E7900F47188 /* SecurityOnboarding.swift in Sources */,
 				7905176D2785FAEF00944817 /* ColdTurkeyApp.swift in Sources */,
@@ -410,6 +416,7 @@
 			files = (
 				7905178E278601CF00944817 /* CreatePass.swift in Sources */,
 				79C1AFAF28450E9300F47188 /* OnboardingRouter.swift in Sources */,
+				793437AE288F0FB6000B10EC /* extension date isAfter.swift in Sources */,
 				790517702785FAEF00944817 /* ContentView.swift in Sources */,
 				79C1AFAB28450E7900F47188 /* SecurityOnboarding.swift in Sources */,
 				7905176E2785FAEF00944817 /* ColdTurkeyApp.swift in Sources */,
@@ -431,6 +438,7 @@
 			files = (
 				790517602785FAEF00944817 /* Tests_iOSLaunchTests.swift in Sources */,
 				7905175E2785FAEF00944817 /* Tests_iOS.swift in Sources */,
+				793437AF288F1097000B10EC /* extension date isAfter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

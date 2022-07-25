@@ -30,7 +30,7 @@ struct ShowCreds: View {
                 Text(store.login)
             }
             
-            if store.releaseDate < Date.now {
+            if Date.now.isAfter(store.releaseDate) {
                 HStack {
                     Text("Password:")
                         .fontWeight(.bold)
@@ -46,7 +46,7 @@ struct ShowCreds: View {
                         Text(store.password)
                             .redacted(reason: .placeholder)
                     }
-                    Text("This password will be unlocked in \(store.releaseDate, formatter: dateFormatter)")
+                    Text("This password will be unlocked after \(store.releaseDate, formatter: dateFormatter)")
                         .fontWeight(.bold)
                     
                 }
@@ -55,9 +55,11 @@ struct ShowCreds: View {
     }
 }
 
+
+
 struct ShowCreds_Previews: PreviewProvider {
     static var previews: some View {
-        let store = PassStore(id: UUID(), service: "Twitter", login: "tarrask", password: "ASODAJS", releaseDate: Date.distantFuture)
+        let store = PassStore(id: UUID(), service: "Twitter", login: "tarrask", password: "ASODAJS", releaseDate: .now)
         return ShowCreds(store: store)
     }
 }
