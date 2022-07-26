@@ -36,7 +36,7 @@ class PassManager: ObservableObject {
         documentsFolder.appendingPathComponent("pass.data")
     }
     
-    private func load() {
+    func load() {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let data = try? Data(contentsOf: PassManager.passURL) else {
                 return
