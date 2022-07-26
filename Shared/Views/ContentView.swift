@@ -35,10 +35,11 @@ struct ContentView: View {
                 .listStyle(InsetGroupedListStyle())
                 
             }.navigationTitle("Stored Passwords")
+                .navigationBarItems(trailing: NavigationLink(destination: CreatePass(manager: manager)) {
+                    Text("Add Password")
+                })
         }
-        .navigationBarItems(trailing: NavigationLink(destination: CreatePass(manager: manager)) {
-                Text("Add Password")
-        })
+        
         
     }
     
